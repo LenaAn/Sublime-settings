@@ -1,11 +1,9 @@
 <snippet>
 	<content><![CDATA[
-vector<${1:int}> ${2:a};
-vector<${1:int}> ${2:a}.resize(${3:n});
-fill(${2:a}.begin(), ${2:a}.end(), ${4: 0});
+cout << "${1:var}: " << ' ' << ${1:var} << endl;
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>vector</tabTrigger>
+	<tabTrigger>debug_print</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.c++</scope>
 </snippet>
