@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+const int N = 11111111;
+vector<int> primes;
+int erat[N];
+
+void calculate_erat() {
+	erat[1] = 1;
+	for (int i = 2; i < N; ++i) {
+		if (erat[i] == 0) {
+			erat[i] = i;
+			primes.push_back(i);
+		}
+		for (int p : primes) {
+			if (p > erat[i] || i * p >= N) {
+				break;
+			}
+			erat[i * p] = p;
+		}
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>erat</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
